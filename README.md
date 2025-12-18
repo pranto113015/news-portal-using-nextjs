@@ -1,11 +1,18 @@
-```bash
-pnpm create next-app@latest . --yes
+``` bash
+npx create-next-app@latest .
+
 ```
+
+```bash
+npx shadcn@latest init
+```
+
+
+```bash
+npx shadcn@latest add navigation-menu
+```
+
 
 ```bash
 pnpm dev
-```
-
-```bash
-pnpm dlx shadcn@latest init
 ```
