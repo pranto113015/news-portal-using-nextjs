@@ -7,6 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
+import { Switch } from "@/components/ui/switch"
 
 const Navbar = () => {
   return (
@@ -78,8 +79,9 @@ const Navbar = () => {
           </NavigationMenu>
 
           {/* color switcher and login button */}
-          <div>
-            <span>Dark Mode</span>
+          <div className="flex items-center">
+            <span className="mr-2">Dark Mode</span>
+            <Switch />
           </div>
 
 
