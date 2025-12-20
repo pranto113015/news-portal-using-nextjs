@@ -78,6 +78,9 @@ const Navbar = () => {
           </NavigationMenu>
 
           {/* color switcher and login button */}
+          <div>
+            <span>Dark Mode</span>
+          </div>
 
 
           

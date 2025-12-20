@@ -1,4 +1,4 @@
-``` bash
+```bash
 npx create-next-app@latest .
 
 ```
@@ -7,11 +7,13 @@ npx create-next-app@latest .
 npx shadcn@latest init
 ```
 
-
 ```bash
 npx shadcn@latest add navigation-menu
 ```
 
+```bash
+npx shadcn@latest add switch
+```
 
 ```bash
 pnpm dev
