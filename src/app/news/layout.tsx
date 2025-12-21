@@ -4,10 +4,11 @@ import Link from "next/link";
 const Newslayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="py-12">
-      <h1>Latest News</h1>
+      <h1 className="text-2xl font-bold mb-8">Latest News</h1>
       <nav className="space-x-4 mb-4">
         <Link href="/news/sports">Sports</Link>
         <Link href="/news/health">Health</Link>
+        <Link href="/news/tech">Technology</Link>
       </nav>
 
       <div className="flex justify-between">
