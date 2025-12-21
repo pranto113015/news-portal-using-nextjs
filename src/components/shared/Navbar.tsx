@@ -91,7 +91,7 @@ const Navbar = () => {
 
           {/* mobile hamburger menu */}
           <div className="lg:hidden">
-            <Button><AiOutlineMenu /></Button>
+            <Button variant={"outline"}><AiOutlineMenu size={24} /></Button>
 
           </div>
         </nav>
