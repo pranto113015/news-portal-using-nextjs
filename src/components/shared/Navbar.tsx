@@ -9,6 +9,7 @@ import {
 } from "../ui/navigation-menu";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   return (
@@ -86,6 +87,12 @@ const Navbar = () => {
               <Switch />
             </div>
             <Button variant="default">Login</Button>
+          </div>
+
+          {/* mobile hamburger menu */}
+          <div className="lg:hidden">
+            <Button><AiOutlineMenu /></Button>
+
           </div>
         </nav>
       </header>

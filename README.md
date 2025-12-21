@@ -16,5 +16,9 @@ npx shadcn@latest add switch
 ```
 
 ```bash
+pnpm add react-icons --save
+```
+
+```bash
 pnpm dev
 ```
