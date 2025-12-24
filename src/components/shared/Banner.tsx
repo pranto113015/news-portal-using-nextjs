@@ -1,12 +1,21 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Image from "next/image";
+import bannar from "@/assests/banar.jpg"
 
 export default function Banner() {
   return (
-    <div className="bg-slate-100">
-      <div className="p-5 grid grid-cols-1 md:grid-cols-2 items-center  gap-8">
+    <div className="bg-slate-100 ">
+      <div className="px-4 py-8 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center  gap-8">
         {/* image */}
-        <div>Image</div>
+        <div>
+          <Image
+            src={bannar}
+            alt="banner"
+            width={500}
+            height={500}
+          />
+        </div>
         <div className="space-y-4">
           <h4 className="text-sm font-semibold">Technology</h4>
           <h2 className="text-3xl font-bold">
@@ -22,7 +31,7 @@ export default function Banner() {
             earum optio! Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Incidunt, libero!
           </p>
-        <Button variant="default">Read More</Button>
+          <Button variant="default">Read More</Button>
         </div>
       </div>
     </div>
