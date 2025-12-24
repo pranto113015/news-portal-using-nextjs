@@ -113,9 +113,9 @@ const Navbar = () => {
           <div className="lg:hidden">
             <Button variant={"outline"} onClick={toggleMenu}>
               {isMenuOpen ? (
-                <AiOutlineClose size={20} />
+                <AiOutlineClose size={24} />
               ) : (
-                <AiOutlineMenu size={20} />
+                <AiOutlineMenu size={24} />
               )}
             </Button>
           </div>
