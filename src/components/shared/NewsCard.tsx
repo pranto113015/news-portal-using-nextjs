@@ -21,6 +21,7 @@ const NewsCard = ({ item }: NewsCardProps) => {
         <h2 className="text-xl font-semibold my-3">
           {item?.title.substring(0, 65)}..
         </h2>
+
         <p className="mb-4">{item?.description.substring(0, 85)}..</p>
         <Link
           href={`/news/${item?._id}`}

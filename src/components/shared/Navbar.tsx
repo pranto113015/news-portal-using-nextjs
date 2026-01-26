@@ -1,6 +1,3 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -12,16 +9,10 @@ import {
 } from "../ui/navigation-menu";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
-  const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  let pathname;
 
   return (
     <div>
@@ -110,15 +101,7 @@ const Navbar = () => {
           </div>
 
           {/* mobile hamburger menu */}
-          <div className="lg:hidden">
-            <Button variant={"outline"} onClick={toggleMenu}>
-              {isMenuOpen ? (
-                <AiOutlineClose size={24} />
-              ) : (
-                <AiOutlineMenu size={24} />
-              )}
-            </Button>
-          </div>
+          <MobileMenu />
         </nav>
       </header>
     </div>
