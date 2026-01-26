@@ -20,5 +20,9 @@ pnpm add react-icons --save
 ```
 
 ```bash
+pnpm dlx shadcn@latest add input
+```
+
+```bash
 pnpm dev
 ```
