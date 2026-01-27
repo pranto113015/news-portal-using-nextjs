@@ -13,6 +13,7 @@ const NewsCard = ({ item }: NewsCardProps) => {
           width={500}
           height={500}
           alt="news image"
+          priority
           className="mb-5 md:h-56 rounded hover:scale-105 cursor-pointer transition-all duration-200"
         />
       </Link>

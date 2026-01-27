@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import bannar from "@/assests/banar.jpg";
+import bannar from "@/assests/banar.webp";
 
 export default function Banner() {
   return (
