@@ -24,7 +24,7 @@ function NewsList() {
     <div>
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-12 mb-5">
         <SearchBar onSearch={setSearch} />
-        <CategoryFilter onSelectCategory={setCategory} />
+        <CategoryFilter onCategoryChange={setCategory} />
       </div>
       {/* news cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-between">
