@@ -5,11 +5,18 @@ import bannar from "@/assests/banar.webp";
 
 export default function Banner() {
   return (
-    <div className="bg-slate-100 ">
+    <div className="bg-slate-100 dark:bg-gray-800 dark:text-white rounded-md">
       <div className="px-4 py-8 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center  gap-8">
         {/* image */}
         <div>
-          <Image src={bannar} alt="banner" width={500} height={500} loading="eager" className="w-full h-auto" />
+          <Image
+            src={bannar}
+            alt="banner"
+            width={500}
+            height={500}
+            loading="eager"
+            className="w-full h-auto rounded"
+          />
         </div>
         <div className="space-y-4">
           <h4 className="text-sm font-semibold">Technology</h4>
