@@ -13,7 +13,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import MobileMenu from "./MobileMenu";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "@/context/themeContext";
 
 interface ThemeContextType {
@@ -23,8 +23,13 @@ interface ThemeContextType {
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const { isDarkMode, toggleTheme }: any = useContext(ThemeContext);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <header
@@ -35,6 +40,36 @@ const Navbar = () => {
         <div className="text-xl font-bold">
           <Link href="/">Daily News</Link>
         </div>
+
+        {/* Mobile menu button */}
+        <button
+          onClick={toggleMobileMenu}
+          className="lg:hidden flex items-center justify-center w-10 h-10 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+          aria-label="Toggle mobile menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {isMobileMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
 
         {/* desktop menu */}
         <NavigationMenu className="hidden lg:flex">
@@ -119,8 +154,10 @@ const Navbar = () => {
           <Button>Login</Button>
         </div>
 
-        {/* mobile */}
-        <MobileMenu />
+        {/* mobile menu */}
+        {isMobileMenuOpen && (
+          <MobileMenu onClose={() => setMobileMenuOpen(false)} />
+        )}
       </nav>
     </header>
   );
